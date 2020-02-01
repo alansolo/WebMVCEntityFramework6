@@ -50,5 +50,24 @@ namespace Datos.Factura
 
             return resultado;
         }
+
+        public List<Entidades.Factura.Factura> GetFactura()
+        {
+            List<Entidades.Factura.Factura> ListFactura = new List<Entidades.Factura.Factura>();
+
+            try
+            {
+                using (var bd = new PruebaEntities())
+                {
+                    ListFactura = bd.Factura.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+            return ListFactura;
+        }
     }
 }

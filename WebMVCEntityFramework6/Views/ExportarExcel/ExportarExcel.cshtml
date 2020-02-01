@@ -1,0 +1,31 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/ExportarExcel/ExportarExcel.js"></script>
+
+</head>
+<body>
+    <div ng-app="MyApp" ng-controller="MyController">
+
+        <div class="row">
+            <a href="@Url.Action("ExportarArchivoExcel","ExportarExcel")" class="btn btn-primary" id="ExportarCronograma">
+                <i class="fa fa-download fa-lg" aria-hidden="true"></i> Descargar Cronograma
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>

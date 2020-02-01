@@ -25,5 +25,24 @@ namespace Negocio.Factura
 
             return resultado;
         }
+
+        public List<Entidades.Factura.Factura> GetFactura()
+        {
+            List<Entidades.Factura.Factura> ListFactura = new List<Entidades.Factura.Factura>();
+
+            try
+            {
+                Datos.Factura.Factura bdFactura = new Datos.Factura.Factura();
+
+                ListFactura = bdFactura.GetFactura();
+            }
+            catch (Exception ex)
+            {
+                
+            }
+
+
+            return ListFactura;
+        }
     }
 }
