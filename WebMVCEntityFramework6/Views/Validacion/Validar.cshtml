@@ -1,0 +1,71 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/Validacion/Validacion.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/bootstrap-notity.js"></script>
+    <script src="~/Scripts/Validacion/Validacion.js"></script>
+
+</head>
+<body>
+    <div ng-app="MyApp" ng-controller="MyController">
+
+        <div>
+
+            <form action="" class="was-validated">
+                @*VALIDAR NUMERO*@
+                <div class="form-group row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Numero:</label>
+                    <div class="col-sm-10">
+                        <input type="number" ng-model="AngNumero" class="form-control" id="txtNumero" title="Numero" placeholder="Numero" required max="100" min="1">
+                    </div>
+                </div>
+                @*VALIDAR DECIMAL*@
+                <div class="form-group row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Decimal:</label>
+                    <div class="col-sm-10">
+                        <input type="text" ng-model="AngDecimal" class="form-control" id="txtDecimal" title="Decimal" placeholder="Decimal" pattern="[-+]?[0-9]*[.,]?[0-9]+" required>
+                    </div>
+                </div>
+                @*VALIDAR SOLO LETRAS*@
+                <div class="form-group row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Solo Letra:</label>
+                    <div class="col-sm-10">
+                        <input type="text" ng-model="AngSoloLetra" class="form-control"  id="txtSoloLetra" title="Solo Letra" placeholder="Solo Letra" required
+                               pattern="[a-zA-Z]+" oninvalid="setCustomValidity('Please enter on alphabets only.')">
+                    </div>
+                </div>
+                @*VALIDAR EMAIL*@
+                <div class="form-group row">
+                    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        <input type="email" ng-model="AngEmail" class="form-control" id="txtEmail" title="Email" placeholder="Email" required >
+                    </div>
+                </div>
+                @*VALIDAR PASSWORD*@
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                    <div class="col-sm-10">
+                        <input type="password" ng-model="AngPassword" class="form-control" id="txtPassword" placeholder="Password">
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-info" ng-disabled="ValidarAngular()" ng-click="Guardar()">Guardar</button>
+            </form>
+
+        </div>
+
+    </div>
+</body>
+</html>
