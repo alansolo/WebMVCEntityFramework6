@@ -8,6 +8,5 @@ namespace Negocio
 {
     class Prueba_2
     {
-        //HOLA MUNDO
     }
 }
