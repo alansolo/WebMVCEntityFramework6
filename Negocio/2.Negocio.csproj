@@ -47,6 +47,7 @@
     <Compile Include="Factura\Factura.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Prueba.cs" />
+    <Compile Include="Prueba_2.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos\3.Datos.csproj">
